@@ -53,7 +53,7 @@ public struct StringSegmentLineEnumerator : IEnumerator<StringSegment>, IEnumera
     private static (int Index, int Stride) IndexOfNewlineChar(ReadOnlySpan<char> text)
     {
 #if NET8_0_OR_GREATER
-        var idx = text.IndexOfAny(CharConstants.NewlineCharIndexOfAny);
+        var idx = text.IndexOfAny(CharConstants.NewlineCharSearchValues);
 #else
         var idx = text.IndexOfAny(CharConstants.NewlineChars);
 #endif

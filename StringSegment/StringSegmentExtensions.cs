@@ -263,13 +263,13 @@ public static class StringSegmentExtensions
 #endif
     
 #if NET8_0_OR_GREATER
-    public static int IndexOfAnyExcept(this StringSegment segment, IndexOfAnyValues<char> values)
+    public static int IndexOfAnyExcept(this StringSegment segment, SearchValues<char> values)
         => segment.AsSpan().IndexOfAnyExcept(values);
-    public static int LastIndexOfAnyExcept(this StringSegment segment, IndexOfAnyValues<char> values)
+    public static int LastIndexOfAnyExcept(this StringSegment segment, SearchValues<char> values)
         => segment.AsSpan().LastIndexOfAnyExcept(values);
-    public static int IndexOfAny(this StringSegment segment, IndexOfAnyValues<char> values)
+    public static int IndexOfAny(this StringSegment segment, SearchValues<char> values)
         => segment.AsSpan().IndexOfAny(values);
-    public static int LastIndexOfAny(this StringSegment segment, IndexOfAnyValues<char> values)
+    public static int LastIndexOfAny(this StringSegment segment, SearchValues<char> values)
         => segment.AsSpan().LastIndexOfAny(values);
     public static int IndexOfAnyInRange(this StringSegment segment, char lowInclusive, char highInclusive)
         => segment.AsSpan().IndexOfAnyInRange(lowInclusive, highInclusive);

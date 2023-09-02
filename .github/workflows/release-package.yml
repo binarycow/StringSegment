@@ -57,5 +57,5 @@ jobs:
       - name: Push to GitHub nuget feed
         run: dotnet nuget push --source github --api-key ${{ secrets.GITHUB_TOKEN }} StringSegment*.nupkg --skip-duplicate
 
-      - name: Push to official nuget feed
-        run: dotnet nuget push --source $NUGET_FEED --api-key $NUGET_KEY StringSegment*.nupkg --skip-duplicate
+      #- name: Push to official nuget feed
+      #  run: dotnet nuget push --source $NUGET_FEED --api-key $NUGET_KEY StringSegment*.nupkg --skip-duplicate
